@@ -1,0 +1,42 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{#<h1>Register Page</h1>#}
+{#    <form method = 'post'>#}
+{#        {{uf.as_p}}#}
+{#        <input type="submit" value = "ok" />#}
+{#    </form>#}
+{#</body>#}
+{#</html>#}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="index.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+		<div class="heading">
+		</div>
+
+		<div class="body" align="center">
+        <h1>Register Page</h1>
+        {% if repeat_username %}<p><strong>The username has already been used! Please choose another one!</strong></p><br>{% endif %}
+        <form action="{% url 'register_update'%}" method="post">
+{#{% csrf_token %}#}
+            Username:<input type="text" name="username" />
+            <br>
+            Password:<input type="text" name="password" />
+            <br>
+            <input type="submit" value="ok" />
+            </form>
+        </div>
+	</div>
+</body>
+</html>

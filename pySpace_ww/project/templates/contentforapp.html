@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{% url 'contentforapp'%}" method="post">
+{#{% csrf_token %}#}
+    Content:<input type="text" name="content" />
+    Position:<input type="text" name="position" />
+<input type="submit" value="ok" />
+</form>
+</body>
+</html>
